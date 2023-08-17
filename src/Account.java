@@ -1,6 +1,11 @@
+/**
+ * Account Class, used for carrying all of the information of an account and doing simple actions
+ * @author seanm
+ */
+
 public class Account {
-	private int money, secretCounter, last4SSN;
-	private double interestRate;
+	private int secretCounter, last4SSN;
+	private double interestRate, money;
 	private String name, SSN, password, email;
 	
 	public Account(String name, String SSN, String password, String email)
@@ -22,11 +27,55 @@ public class Account {
 
 		return Integer.parseInt(SSN.substring(len-4, len));
 	}
+	
+	
+	/**
+	 * Deposits money into account
+	 */
+	public void deposit(double mon)
+	{
+		money += mon;
+	}
+	
+	/**
+	 * Reduces the amount of money in account
+	 */
+	public void withdrawl(double mon)
+	{
+		money -= mon;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/* ===============================================================================================
+	 *    Getters and Setters
+	 * ===============================================================================================*/
 
 	public String getName()
 	{
 		return name;
 	}
+	
+	public void setName(String newName)
+	{
+		name = newName;
+	}
+	
+	public double getMoney()
+	{
+		return money;
+	}
+	
+	
 	
 	public String toString()
 	{
