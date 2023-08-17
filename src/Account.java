@@ -1,4 +1,3 @@
-
 public class Account {
 	private int money, secretCounter, last4SSN;
 	private double interestRate;
@@ -21,12 +20,17 @@ public class Account {
 	private int getLast4SSN() {
 		int len = SSN.length();		
 
-		return Integer.parseInt(SSN.substring(len-5, len-1));
+		return Integer.parseInt(SSN.substring(len-4, len));
 	}
 
 	public String getName()
 	{
 		return name;
+	}
+	
+	public String toString()
+	{
+		return last4SSN + "";
 	}
 	
 }
